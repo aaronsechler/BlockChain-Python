@@ -8,4 +8,6 @@ Sending an Ethereum transaction with python is simple. Open a terminal and navig
 
 This would ordinarily be done with the app MyCryptoWallet, but since that doesn't work on my lovely Mac I used the same mnemonic key I used when creating the wallet in Ganache and the screenshot above shows both the python commands used to send the transaction and the record of it Ganache.
 
-The same set of commands can be used to send BTCTEST by replacing ETH with BTCTEST, only for some reason it stopped working. A screen shot of the commands and error are below, and the wallet.py file 
+The same set of commands can be used to send BTCTEST by replacing ETH with BTCTEST, only for some reason it stopped working. A screen shot of the commands and error are below, and the wallet.py file and the wallet folder are attached.
+
+![Screenshot of Ethereum Transaction](Bitcoin Error.png)
