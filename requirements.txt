@@ -1,0 +1,33 @@
+Creating this wallet requires you to install three main packages and a minor one to operate the wallet. The first one is the wallet itself, which is created by cloing the github repository https://github.com/dan-da/hd-wallet-derive to the folder that you want to store the wallet in. You then need to run the following four line of code to install it, and the fith one will test that it's working.
+
+ git clone https://github.com/dan-da/hd-wallet-derive
+ cd hd-wallet-derive
+ php -r "readfile('https://getcomposer.org/installer');" | php
+ php composer.phar install
+ 
+ ./hd-wallet-derive.php -g --key=xprv9tyUQV64JT5qs3RSTJkXCWKMyUgoQp7F3hA1xzG6ZGu6u6Q9VMNjGr67Lctvy5P8oyaYAL9CAWrUE9i6GoNMKUga5biW6Hx4tws2six3b9c
+
+The wallet will be in it's own folder called HD-WALLET-DERIVE, so you need to import the subprocess library to allow python to pass code to the wallet's folder.
+
+import subprocess
+
+The next major package is bit, which will allow python to work with bitcoin.
+
+pip install bit
+
+This will install bit, and you need to import two libraries to run the code.
+
+from bit import wif_to_key
+from bit import PrivateKeyTestnet
+from bit.network import NetworkAPI
+
+Lastly you need to install web3 to allow python to connect to the Ethereum network.
+
+pip install web3
+
+The first line of the following code imports the basic libraries, and the rest allow it work with the Proof of Authority Blockchain used here.
+
+from web3 import Web3, middleware, Account
+from web3.middleware import geth_poa_middleware
+w3 = Web3(Web3.HTTPProvider("http://127.0.0.1:8545"))
+w3.middleware_onion.inject(geth_poa_middleware, layer=0)
