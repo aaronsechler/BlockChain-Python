@@ -10,4 +10,4 @@ This would ordinarily be done with the app MyCryptoWallet, but since that doesn'
 
 The same set of commands can be used to send BTCTEST by replacing ETH with BTCTEST, only for some reason it stopped working. A screen shot of the commands and error are below, and the wallet.py file and the wallet folder are attached.
 
-![Screenshot of Ethereum Transaction](Bitcoin Error.png)
+![Screenshot of Ethereum Transaction](Bitcoin_Error.png)
